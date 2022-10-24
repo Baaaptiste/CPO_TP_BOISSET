@@ -27,6 +27,7 @@ public class TP0_EXO_1 {
     System.out.println("Bonjour, quel est votre prenom ?");
     prenom = sc.nextLine();
     System.out.println(prenom);
+    
     }
     
 }
