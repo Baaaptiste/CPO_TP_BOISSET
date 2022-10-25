@@ -8,18 +8,21 @@ package tp2_bieres_boisset;
  *
  * @author bapti
  */
+
+//Création classe Bouteille
 public class BouteilleBiere {
     String Nom ;
     double degreAlcool ;
     String brasserie;
     boolean ouverte ;
  
-
+//Systeme d'affichage
     public void lireEtiquette() {
       System.out.println("Bouteille de " + Nom +" (" + degreAlcool +
          " degres) \nBrasserie : " + brasserie ) ;
     }
 
+    //Def constructeur
     public BouteilleBiere(String unNom, double unDegre, String
         uneBrasserie) {
         Nom = unNom;
@@ -28,6 +31,7 @@ public class BouteilleBiere {
         ouverte = false;
     }
 
+    //Def fonction decapsuler
     public boolean Decapsuler(){
         if (ouverte == false){
             ouverte = true ; 

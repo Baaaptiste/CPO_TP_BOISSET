@@ -15,7 +15,8 @@ public class TP2_Bieres_BOISSET {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        
+ 
+    //Création de bouteilles
     BouteilleBiere uneBiere = new BouteilleBiere("Cuvée des trolls",
     7.0 ,"Dubuisson") ;
     uneBiere.lireEtiquette();
