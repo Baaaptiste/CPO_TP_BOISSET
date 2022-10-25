@@ -6,7 +6,7 @@ package tp2_bieres_boisset;
 
 /** 
  *
- * @author bapti
+ * @author bapti 
  */
 public class TP2_Bieres_BOISSET {
 
