@@ -15,6 +15,10 @@ public class Tp_Heritage {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        
+        Arme Solal = new Arme("SOL", 300);
+            System.out.println(Solal);
+
     }
     
 }
