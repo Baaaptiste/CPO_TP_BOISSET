@@ -4,6 +4,9 @@
  */
 package tp_heritage;
 
+import Armes.Baton;
+import Armes.Arme;
+import Armes.Epee;
 import java.util.ArrayList;
 
 /**
@@ -32,9 +35,10 @@ public class Tp_Heritage {
     Tab.add(Epee2);    
     Tab.add(Baton1);    
     Tab.add(Baton2);    
-
-        
-        
-    }
     
+    
+    for (int i =0; i<4 ;i++){
+        System.out.print(Tab.get(i));
+        }
+    } 
 }

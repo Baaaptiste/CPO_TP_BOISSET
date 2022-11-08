@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package tp_heritage;
+package Armes;
 
 /**
  *
@@ -25,7 +25,7 @@ public class Epee extends Arme{
     @Override
     public String toString() {
         String chaine_a_retourner;
-        chaine_a_retourner = Nom +" : "+ NvAttaque +"," + Finesse;
+        chaine_a_retourner = "Epee :" +Nom +" : "+ NvAttaque +"," + Finesse;
         return chaine_a_retourner ;
      
     }
