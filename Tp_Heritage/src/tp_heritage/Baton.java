@@ -21,4 +21,13 @@ public class Baton extends Arme{
               Age = 0;    
           }
         }   
+
+   @Override
+    public String toString() {
+        String chaine_a_retourner;
+        chaine_a_retourner = Nom +" : "+ NvAttaque +"," + Age;
+        return chaine_a_retourner ;
+     
+    }
+
 }

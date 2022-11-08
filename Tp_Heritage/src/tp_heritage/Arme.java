@@ -10,7 +10,7 @@ package tp_heritage;
  */
 public class Arme {
     String Nom;
-    private int NvAttaque;
+    int NvAttaque;
     
     public Arme (String unNom, int unNvAttaque){
           Nom = unNom;
@@ -27,7 +27,7 @@ public class Arme {
     @Override
     public String toString() {
         String chaine_a_retourner;
-        chaine_a_retourner = Nom +" : "+ NvAttaque +"Pv";
+        chaine_a_retourner = Nom +" : "+ NvAttaque;
         return chaine_a_retourner ;
      
     }

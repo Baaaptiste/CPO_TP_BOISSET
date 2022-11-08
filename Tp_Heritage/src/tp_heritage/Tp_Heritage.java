@@ -4,6 +4,8 @@
  */
 package tp_heritage;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author bapti
@@ -16,9 +18,23 @@ public class Tp_Heritage {
     public static void main(String[] args) {
         // TODO code application logic here
         
-        Arme Solal = new Arme("SOL", 300);
-            System.out.println(Solal);
+        Epee Epee1 = new Epee("Excalibur", 7,5);
+        Epee Epee2 = new Epee("Durandal", 4,7);
+        Baton Baton1 = new Baton("Chene", 4,5);
+        Baton Baton2 = new Baton("Charme", 5,6);
+        System.out.println(Epee1);
+        System.out.println(Epee2);
+        System.out.println(Baton1);
+        System.out.println(Baton2);
 
+    ArrayList<Arme> Tab = new ArrayList<Arme>();
+    Tab.add(Epee1); 
+    Tab.add(Epee2);    
+    Tab.add(Baton1);    
+    Tab.add(Baton2);    
+
+        
+        
     }
     
 }

@@ -21,4 +21,13 @@ public class Epee extends Arme{
               Finesse = 0;    
           }
         }   
+
+    @Override
+    public String toString() {
+        String chaine_a_retourner;
+        chaine_a_retourner = Nom +" : "+ NvAttaque +"," + Finesse;
+        return chaine_a_retourner ;
+     
+    }
+    
 }
