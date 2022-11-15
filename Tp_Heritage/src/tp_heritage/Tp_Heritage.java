@@ -9,6 +9,7 @@ import Armes.Arme;
 import Armes.Epee;
 import Personnages.Guerrier;
 import Personnages.Magicien;
+import Personnages.Personnage;
 import java.util.ArrayList;
 
 /**
@@ -43,17 +44,61 @@ public class Tp_Heritage {
         System.out.println(TabArme.get(i));
         }
     
-    // Partie 2
+    // Pa/rtie 2
     
     
         Magicien Magicien1 = new Magicien("Gandalf",65,"Confirme");
         Magicien Magicien2 = new Magicien("Garcimore",44,"Novice");
-        Guerrier Guerrier1 = new Guerrier("Conan",78,"a pied");
+        Guerrier Guerrier1 = new Guerrier("Conan",78,"a Pied");
         Guerrier Guerrier2 = new Guerrier("Lannister",45,"a Cheval");
-        System.out.println(Magicien1);
-        System.out.println(Magicien2);
-        System.out.println(Guerrier1);
-        System.out.println(Guerrier2);
+        
+        ArrayList<Personnage> TabPersonnage = new ArrayList<Personnage>();
+        TabPersonnage.add(Magicien1); 
+        TabPersonnage.add(Magicien2);    
+        TabPersonnage.add(Guerrier1);    
+        TabPersonnage.add(Guerrier2);    
+    
+    
+    for (int i =0; i<4 ;i++){
+        System.out.println(TabPersonnage.get(i));
+        }
+        
+    // Pa/rtie 3
+    for (int i =0; i<10 ;i++){
+        System.out.println("");
+        }
+    
+        Guerrier Guerrier3 = new Guerrier("Boisset",100,"a Cheval");
+        Magicien Magicien3 = new Magicien("Chabasseur",44,"Confirme");
+        Epee Epee11 = new Epee("Sharpness", 1,10);
+        Epee Epee22 = new Epee("Knockback", 5,50);
+        Epee Epee33 = new Epee("Smite", 7,70);
+        Baton Baton11 = new Baton("Knockback", 2,20);
+        Baton Baton22 = new Baton("Unbreaking", 3,30);
+        Baton Baton33 = new Baton("Mending", 8,80);
+        
+        Guerrier3.AjoutArme(Epee11);
+        Guerrier3.AjoutArme(Epee22);
+        Guerrier3.AjoutArme(Baton11);
+        
+        Guerrier3.EquipeArme("Sharpness");
+        
+        Magicien3.AjoutArme(Baton22);
+        Magicien3.AjoutArme(Baton33);
+        Magicien3.AjoutArme(Epee33);
+        
+        Magicien3.EquipeArme("Mending");
+
+        System.out.println(Baton22);
+        System.out.println(Baton33);
+        System.out.println(Guerrier3);
+        System.out.println(Magicien3);
+
+       
+
+
+
         
     } 
+
 }

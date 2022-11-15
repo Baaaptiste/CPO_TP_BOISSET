@@ -22,6 +22,10 @@ public class Arme {
               NvAttaque = 0;    
           }
         }
+
+    public String getNom() {
+        return Nom;
+    }
     
     
     @Override

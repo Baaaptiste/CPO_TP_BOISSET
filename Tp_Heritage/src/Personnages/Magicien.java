@@ -26,8 +26,10 @@ public class Magicien extends Personnage {
     @Override
     public String toString() {
         String chaine_a_retourner;
-        chaine_a_retourner = "Personnage :" +Nom +" : "+ Vie + " , "+Attribut;
+        chaine_a_retourner = "Personnage :" +Nom +" : "+ Vie + " , "+Attribut +" , " + arme_en_main;
         return chaine_a_retourner ;
      
     }
+    
+    
 }
