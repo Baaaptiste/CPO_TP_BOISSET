@@ -13,7 +13,7 @@ public class Guerrier extends Personnage {
     
     public Guerrier(String unNom, int uneVie, String unCheval) {
         super(unNom, uneVie);
-        if (unCheval=="Cheval"){
+        if (unCheval=="a Cheval"){
             Cheval = true ;
         }
         else{

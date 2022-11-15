@@ -7,6 +7,8 @@ package tp_heritage;
 import Armes.Baton;
 import Armes.Arme;
 import Armes.Epee;
+import Personnages.Guerrier;
+import Personnages.Magicien;
 import java.util.ArrayList;
 
 /**
@@ -40,5 +42,21 @@ public class Tp_Heritage {
     for (int i =0; i<4 ;i++){
         System.out.print(Tab.get(i));
         }
+    
+    // Partie 2
+    
+    
+        Magicien Magicien1 = new Magicien("Gandalf",65,"Confirme");
+        Magicien Magicien2 = new Magicien("Garcimore",44,"Novice");
+        Guerrier Guerrier1 = new Guerrier("Conan",78,"a pied");
+        Guerrier Guerrier2 = new Guerrier("Lannister",45,"a Cheval");
+
+        
+        
+
+    
+    
+    
+    
     } 
 }

@@ -9,15 +9,15 @@ package Personnages;
  * @author bapti
  */
 public class Magicien extends Personnage {
-    boolean Novice;
+    boolean Confirme;
     
-    public Magicien(String unNom, int uneVie, String unNovice) {
+    public Magicien(String unNom, int uneVie, String unConfirme) {
         super(unNom, uneVie);
-        if (unNovice=="Novice"){
-            Novice = true ;
+        if (unConfirme=="Confirme"){
+            Confirme = true ;
         }
         else{
-            Novice = false ;
+            Confirme = false ;
         }
         
     }
