@@ -10,9 +10,11 @@ package Personnages;
  */
 public class Guerrier extends Personnage {
     boolean Cheval;
+    String Attribut ;
     
     public Guerrier(String unNom, int uneVie, String unCheval) {
         super(unNom, uneVie);
+        Attribut = unCheval;
         if (unCheval=="a Cheval"){
             Cheval = true ;
         }
@@ -20,6 +22,13 @@ public class Guerrier extends Personnage {
             Cheval = false ;
         }
         
+    }
+        @Override
+    public String toString() {
+        String chaine_a_retourner;
+        chaine_a_retourner = "Personnage :" +Nom +" : "+ Vie + " , "+Attribut;
+        return chaine_a_retourner ;
+     
     }
     
     

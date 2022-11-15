@@ -32,15 +32,15 @@ public class Tp_Heritage {
         System.out.println(Baton1);
         System.out.println(Baton2);
 
-    ArrayList<Arme> Tab = new ArrayList<Arme>();
-    Tab.add(Epee1); 
-    Tab.add(Epee2);    
-    Tab.add(Baton1);    
-    Tab.add(Baton2);    
+    ArrayList<Arme> TabArme = new ArrayList<Arme>();
+    TabArme.add(Epee1); 
+    TabArme.add(Epee2);    
+    TabArme.add(Baton1);    
+    TabArme.add(Baton2);    
     
     
     for (int i =0; i<4 ;i++){
-        System.out.print(Tab.get(i));
+        System.out.println(TabArme.get(i));
         }
     
     // Partie 2
@@ -50,13 +50,10 @@ public class Tp_Heritage {
         Magicien Magicien2 = new Magicien("Garcimore",44,"Novice");
         Guerrier Guerrier1 = new Guerrier("Conan",78,"a pied");
         Guerrier Guerrier2 = new Guerrier("Lannister",45,"a Cheval");
-
+        System.out.println(Magicien1);
+        System.out.println(Magicien2);
+        System.out.println(Guerrier1);
+        System.out.println(Guerrier2);
         
-        
-
-    
-    
-    
-    
     } 
 }

@@ -10,9 +10,11 @@ package Personnages;
  */
 public class Magicien extends Personnage {
     boolean Confirme;
+    String Attribut;
     
     public Magicien(String unNom, int uneVie, String unConfirme) {
         super(unNom, uneVie);
+        Attribut = unConfirme;
         if (unConfirme=="Confirme"){
             Confirme = true ;
         }
@@ -20,5 +22,12 @@ public class Magicien extends Personnage {
             Confirme = false ;
         }
         
+    }
+    @Override
+    public String toString() {
+        String chaine_a_retourner;
+        chaine_a_retourner = "Personnage :" +Nom +" : "+ Vie + " , "+Attribut;
+        return chaine_a_retourner ;
+     
     }
 }
