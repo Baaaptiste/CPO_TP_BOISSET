@@ -13,9 +13,19 @@ public class PlateauDeJeu {
     
     public PlateauDeJeu() {
         for (int i=0; i<7; i++){
-            for (int j=0; i<6; j++){
+            for (int j=0; j<6; j++){
                 grille[i][j] = new CelluleDeGrille();
             }
         }
+    }
+    
+    public int ajouterJetonDansColonne(Jeton jeton, int colonne){
+        for (int i=0; i<6;i++){
+            if (grille[i][colonne].presenceJeton()==false){
+                grille[i][colonne].affecterJeton(jeton);
+                return i;
+            }
+        }
+        return 0;
     }
 }
