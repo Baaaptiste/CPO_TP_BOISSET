@@ -38,4 +38,34 @@ public class PlateauDeJeu {
         return true;
         
     }
+    
+    public boolean presenceJeton(int x, int y){
+        return grille [x][y].presenceJeton();
+    }
+
+    public String lireCouleurJeton(int x, int y){
+        return grille[x][y].lireCouleurDuJeton();
+    }    
+    
+    public boolean ligneGagnantePourCouleur(String couleur){
+         for (int ligne=0;ligne<6;ligne++){
+             for (int colonne=0;colonne<4;colonne++){
+                 if (grille[ligne][colonne].lireCouleurDuJeton()==couleur){
+                     if (grille[ligne][colonne+1].lireCouleurDuJeton()==couleur){
+                         if (grille[ligne][colonne+2].lireCouleurDuJeton()==couleur){
+                             if (grille[ligne][colonne+3].lireCouleurDuJeton()==couleur){
+                                 return true;
+                             }
+                         }
+                     }
+                 }
+             }
+         }
+         return false;     
+    }
+    
+    
+    
+    
+    
 }
