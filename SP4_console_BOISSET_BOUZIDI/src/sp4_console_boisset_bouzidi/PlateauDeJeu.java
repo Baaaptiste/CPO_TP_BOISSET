@@ -28,4 +28,14 @@ public class PlateauDeJeu {
         }
         return 0;
     }
+    
+    public boolean grilleRemplie(){
+        for (int colonne = 0 ; colonne<7 ; colonne++){
+            if (grille[5][colonne].presenceJeton() == false){
+                return false ;
+            }
+        }
+        return true;
+        
+    }
 }
