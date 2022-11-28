@@ -93,6 +93,75 @@ public class PlateauDeJeu {
     }
     
     
+    public boolean diagonaleMontanteGagnantePourCouleur(String couleur){
+          for (int colonne=0;colonne<4;colonne++){
+             for (int ligne=0;ligne<3;ligne++){
+                 if (grille[ligne][colonne].lireCouleurDuJeton()==couleur){
+                     if (grille[ligne+1][colonne+1].lireCouleurDuJeton()==couleur){
+                         if (grille[ligne+2][colonne+2].lireCouleurDuJeton()==couleur){
+                             if (grille[ligne+3][colonne+3].lireCouleurDuJeton()==couleur){
+                                 return true;
+                             }
+                         }
+                     }
+                 }
+             }
+         }
+         return false;     
+    }           
+
+        public boolean diagonaleDesendanteGagnantePourCouleur(String couleur){
+          for (int colonne=0;colonne<4;colonne++){
+             for (int ligne=3;ligne<6;ligne++){
+                 if (grille[ligne][colonne].lireCouleurDuJeton()==couleur){
+                     if (grille[ligne-1][colonne+1].lireCouleurDuJeton()==couleur){
+                         if (grille[ligne-2][colonne+2].lireCouleurDuJeton()==couleur){
+                             if (grille[ligne-3][colonne+3].lireCouleurDuJeton()==couleur){
+                                 return true;
+                             }
+                         }
+                     }
+                 }
+             }
+         }
+         return false;     
+    }
+        
+    public void tasserColonne(int lacolonne){
+        for (int ligne=0; ligne<7;ligne++){
+            if (grille[ligne][lacolonne].presenceJeton()==false){
+                if (grille[ligne+1][lacolonne].presenceJeton()==true){
+                    grille[ligne][lacolonne].affecterJeton(grille[ligne+1][lacolonne].recupererJeton());
+                }              
+            }
+        }
+    }
+       
+    public boolean colonneRemplie(int colonne){
+        if (grille[5][colonne].presenceJeton() == true){
+            return true ;
+        }
+        return false;        
+    } 
     
+    public void placerTrouNoir(int x, int y){
+        grille[x][y].placerTrouNoir();
+    }
+    
+    public void supprimerTrouNoir(int x, int y){
+        grille[x][y].supprimerTrouNoir();
+    }
+    
+    public void placerDesintegrateur(int x, int y){
+        grille[x][y].placerDesintegrateur();
+    }    
+    
+    public void supprimerJeton(int x, int y){
+        grille[x][y].supprimerJeton();
+    }
+    
+    public Jeton recupererJeton(int x, int y){
+        return grille[x][y].recupererJeton();    
+    }   
     
 }
