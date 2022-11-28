@@ -89,4 +89,22 @@ public class CelluleDeGrille {
        supprimerJeton() ;
        supprimerTrouNoir();
     }
+
+    @Override
+    public String toString() {
+        if ("J".equals(jetonCourant)||"R".equals(jetonCourant)){
+            return jetonCourant.lireCouleur();
+        }
+        else if (avoirTrouNoir == true){
+            return"@";
+        }
+        else if (avoirDesintegrateur == true && avoirTrouNoir == false){
+            return"D";
+        }
+        else{
+            return".";
+        }
+        }
+    
+    
 }
