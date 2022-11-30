@@ -32,6 +32,22 @@ public class joueur {
     public void ajouterJeton(String unJeton){
         
     }
+    
+    public void ajouterJeton(Jeton jeton) {
+        reserveJetons.add(jeton);
+    }
             
-            
+    public void obtenirDesintegrateur() {
+        nombreDesintegrateurs += 1;
+    }
+
+    public boolean utiliserDesintegrateur() {
+        if (nombreDesintegrateurs > 0) {
+            nombreDesintegrateurs -= 1;
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
 }
