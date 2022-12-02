@@ -127,6 +127,19 @@ public class PlateauDeJeu {
          return false;     
     }
         
+    public boolean etreGagnantePourCouleur(String couleur){
+        if ( ligneGagnantePourCouleur ( couleur ) == true || 
+             colonneGagnantePourCouleur ( couleur ) == true ||
+             diagonaleMontanteGagnantePourCouleur ( couleur ) == true || 
+             diagonaleDesendanteGagnantePourCouleur ( couleur ) == true ) {
+            return  true ;
+        }
+        else {
+            return  false ;
+        }
+    }
+    
+        
     public void tasserColonne(int lacolonne){
         for (int ligne=0; ligne<7;ligne++){
             if (grille[ligne][lacolonne].presenceJeton()==false){
