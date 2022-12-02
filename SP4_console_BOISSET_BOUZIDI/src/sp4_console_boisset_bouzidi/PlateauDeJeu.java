@@ -177,4 +177,21 @@ public class PlateauDeJeu {
         return grille[x][y].recupererJeton();    
     }   
     
+    public boolean presenceTrouNoir(int x, int y){
+        if (grille[x][y].presenceTrouNoir()==true){
+            return true;
+        }
+        else{
+            return false;
+        }     
+    }
+    
+    public boolean presenceDesintegrateur(int x, int y){
+        if (grille[x][y].presenceDesintegrateur()==true){
+            return true;
+        }
+        else{
+            return false;
+        }     
+    }
 }

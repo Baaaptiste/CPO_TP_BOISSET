@@ -14,9 +14,12 @@ public class SP4_console_BOISSET_BOUZIDI {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
-        Jeton jeton = new Jeton ("rouge");
-        System.out.println(jeton);
+       joueur J1 = new joueur("Baptiste");
+       joueur J2 = new joueur("Nawfel");
+       Partie game = new Partie (J1,J2);
+       game.initialiserPartie();
+       game.lancerPartie();
+
     }
     
 }

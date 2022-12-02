@@ -5,6 +5,7 @@
 package sp4_console_boisset_bouzidi;
 
 import java.util.Random;
+import java.util.Scanner;
 
 /**
  *
@@ -77,7 +78,17 @@ public class Partie {
         creerEtAffecterJeton(ListeJoueurs[1]);
     }
     
-    
+    public void lancerPartie(){
+        boolean FinPartie = false;
+        joueurCourant=ListeJoueurs[0];
+        while (FinPartie ==false){
+            Scanner sc;
+            sc = new Scanner(System.in);
+            plateau.afficherGrilleSurConsole();
+
+
+        }
+    }
     
 }
 

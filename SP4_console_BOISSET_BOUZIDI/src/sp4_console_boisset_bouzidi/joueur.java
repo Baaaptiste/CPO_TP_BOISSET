@@ -16,13 +16,13 @@ public class joueur {
     private ArrayList<Jeton> reserveJetons = new ArrayList<Jeton>();
     private int nombreDesintegrateurs;
     
-    public void Joueur(String nomJoueur){
-        nom = nomJoueur;
-        nombreDesintegrateurs = 0;                
+    public  joueur(String nomJoueur){
+        this.nom = nomJoueur;
+        this.nombreDesintegrateurs = 0;                
     }
     
     public void affecterCouleur(String lacouleur){
-        couleur = lacouleur;
+        this.couleur = lacouleur;
     }
     
     public int nombreDeJetons(){
@@ -33,7 +33,11 @@ public class joueur {
     public void ajouterJeton(Jeton jeton) {
         reserveJetons.add(jeton);
     }
-            
+
+    public String getCouleur() {
+        return couleur;
+    }
+    
     public void obtenirDesintegrateur() {
         nombreDesintegrateurs += 1;
     }
@@ -47,4 +51,11 @@ public class joueur {
             return false;
         }
     }
+    
+    public Jeton jouerJeton(){
+        Jeton jetonJoue;
+        jetonJoue=reserveJetons.get(0); //on recupere le jeton qui sera joue pour le renvoyer a la fin
+        reserveJetons.remove(0);
+        return jetonJoue; 
+    }   
 }
