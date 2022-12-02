@@ -83,6 +83,12 @@ public class Partie {
         joueurCourant=ListeJoueurs[0];
         while (FinPartie ==false){
             Scanner sc;
+            
+            
+            
+            
+            
+            
             sc = new Scanner(System.in);
             plateau.afficherGrilleSurConsole();
 
