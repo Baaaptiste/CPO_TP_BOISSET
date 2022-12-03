@@ -16,9 +16,9 @@ public class Partie {
     private joueur joueurCourant = ListeJoueurs[0];
     private PlateauDeJeu plateau  = new PlateauDeJeu();    
     
-    public Partie (joueur joueur1, joueur joueur2) {
-        ListeJoueurs[0]=joueur1;
-        ListeJoueurs[1]=joueur2;
+    public Partie (joueur Joueur1, joueur Joueur2) {
+        ListeJoueurs[0]=Joueur1;
+        ListeJoueurs[1]=Joueur2;
         this.plateau=new PlateauDeJeu();
     }
     
@@ -53,21 +53,21 @@ public class Partie {
             }
         }
         int j = 0 ;
-        while (j!=3){
+        while (j!=2){
             int ligne = r.nextInt(6);
             int colonne = r.nextInt(7);
             if (plateau.presenceTrouNoir(ligne,colonne)==false || plateau.presenceDesintegrateur(ligne,colonne)==false ){
                 plateau.placerTrouNoir(ligne,colonne);
-                i+=1;
+                j+=1;
             } 
         }
         int Z = 0 ;
-        while (Z!=3){
+        while (Z!=2){
             int ligne = r.nextInt(6);
             int colonne = r.nextInt(7);
             if (plateau.presenceTrouNoir(ligne,colonne)==false || plateau.presenceDesintegrateur(ligne,colonne)==false ){
                 plateau.placerDesintegrateur(ligne,colonne);
-                i+=1;
+                Z+=1;
             } 
         }        
     }
@@ -83,14 +83,17 @@ public class Partie {
         joueurCourant=ListeJoueurs[0];
         while (FinPartie ==false){
             Scanner sc;
-            
-            
-            
-            
-            
-            
+            int NumeroColonne;
             sc = new Scanner(System.in);
+            
+            System.out.println("Joueur " + ListeJoueurs[0] +", il vous reste " + ListeJoueurs[0].getReserveJetons().size() + " jetons");
+            System.out.println("Joueur " + ListeJoueurs[1] +", il vous reste " + ListeJoueurs[1].getReserveJetons().size() + " jetons");
+            System.out.println("A toi de jouer " + joueurCourant + " (Jeton : " + joueurCourant.getCouleur() + ")");
+            System.out.println("Saissisez le numero de colonne de 0 à 6");
+            placerTrousNoirsEtDesintegrateurs();
             plateau.afficherGrilleSurConsole();
+            NumeroColonne = sc.nextInt();
+            
 
 
         }

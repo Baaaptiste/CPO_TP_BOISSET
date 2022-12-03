@@ -14,9 +14,9 @@ public class SP4_console_BOISSET_BOUZIDI {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-       joueur J1 = new joueur("Baptiste");
-       joueur J2 = new joueur("Nawfel");
-       Partie game = new Partie (J1,J2);
+       joueur joueur1 = new joueur("Baptiste");
+       joueur joueur2 = new joueur("Nawfel");
+       Partie game = new Partie (joueur1,joueur2);
        game.initialiserPartie();
        game.lancerPartie();
 

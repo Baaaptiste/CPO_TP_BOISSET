@@ -50,7 +50,7 @@ public class PlateauDeJeu {
     
     public void afficherGrilleSurConsole(){
         for (int ligne=5; ligne>=0; ligne--){
-            for (int colonne=0; colonne<6; colonne++){
+            for (int colonne=0; colonne<7; colonne++){
                System.out.print(grille[ligne][colonne]);               
             }
         System.out.println();

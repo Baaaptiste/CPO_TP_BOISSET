@@ -54,8 +54,19 @@ public class joueur {
     
     public Jeton jouerJeton(){
         Jeton jetonJoue;
-        jetonJoue=reserveJetons.get(0); //on recupere le jeton qui sera joue pour le renvoyer a la fin
+        jetonJoue=reserveJetons.get(0); 
         reserveJetons.remove(0);
         return jetonJoue; 
-    }   
+    }  
+    
+    @Override
+    public String toString() {
+        return nom;
+    }
+
+    public ArrayList<Jeton> getReserveJetons() {
+        return reserveJetons;
+    }
+
+    
 }
