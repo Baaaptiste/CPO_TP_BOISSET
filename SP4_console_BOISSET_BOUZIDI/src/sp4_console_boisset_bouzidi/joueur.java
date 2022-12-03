@@ -68,5 +68,11 @@ public class joueur {
         return reserveJetons;
     }
 
+    public int getNombreDesintegrateurs() {
+        return nombreDesintegrateurs;
+    }
+    
+    
+
     
 }

@@ -21,6 +21,13 @@ public class Jeton {
         return couleur;
     }
 
+    public String getCouleur() {  
+        if (couleur=="rouge"){
+            return "R";
+        }else return "J"; //on retourne seulement "R" ou "J" pour l'affichage de la grille
+        
+    }
+    
     @Override
     public String toString() {
         if (couleur == "rouge" ){

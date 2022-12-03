@@ -92,8 +92,8 @@ public class CelluleDeGrille {
 
     @Override
     public String toString() {
-        if ("J".equals(jetonCourant)||"R".equals(jetonCourant)){
-            return jetonCourant.lireCouleur();
+        if (jetonCourant!=null){
+            return jetonCourant.getCouleur();
         }
         else if (avoirTrouNoir == true){
             return"@";

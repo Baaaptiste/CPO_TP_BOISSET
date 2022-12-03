@@ -81,20 +81,44 @@ public class Partie {
     public void lancerPartie(){
         boolean FinPartie = false;
         joueurCourant=ListeJoueurs[0];
+        placerTrousNoirsEtDesintegrateurs();
         while (FinPartie ==false){
             Scanner sc;
-            int NumeroColonne;
-            sc = new Scanner(System.in);
-            
-            System.out.println("Joueur " + ListeJoueurs[0] +", il vous reste " + ListeJoueurs[0].getReserveJetons().size() + " jetons");
-            System.out.println("Joueur " + ListeJoueurs[1] +", il vous reste " + ListeJoueurs[1].getReserveJetons().size() + " jetons");
+            int NumeroColonneJouer;
+            int NumeroLigneJouer;
+            sc = new Scanner(System.in);          
+            System.out.println("Joueur " + ListeJoueurs[0] +", il vous reste " + ListeJoueurs[0].getReserveJetons().size() + " jetons et "+ ListeJoueurs[0].getNombreDesintegrateurs()+" desintegrateurs");
+            System.out.println("Joueur " + ListeJoueurs[1] +", il vous reste " + ListeJoueurs[1].getReserveJetons().size() + " jetonset "+ ListeJoueurs[1].getNombreDesintegrateurs()+" desintegrateurs");
             System.out.println("A toi de jouer " + joueurCourant + " (Jeton : " + joueurCourant.getCouleur() + ")");
-            System.out.println("Saissisez le numero de colonne de 0 à 6");
-            placerTrousNoirsEtDesintegrateurs();
+            System.out.println("Saissisez le numero de colonne de 0 a 6");
             plateau.afficherGrilleSurConsole();
-            NumeroColonne = sc.nextInt();
-            
+            NumeroColonneJouer = sc.nextInt();           
+            NumeroLigneJouer = plateau.ajouterJetonDansColonne(joueurCourant.jouerJeton(), NumeroColonneJouer);
 
+            if (plateau.grilleRemplie()==true){
+                System.out.println("Fin de partie, la grille est remplie");
+                FinPartie = true;
+            }
+            
+            if (NumeroLigneJouer==-1){
+                System.out.println("La colonne " +NumeroColonneJouer+" est pleine");
+                joueurCourant.ajouterJeton(new Jeton(joueurCourant.getCouleur()));                
+            }
+            
+            if (plateau.etreGagnantePourCouleur(joueurCourant.getCouleur())) {
+                System.out.println("Bravo " + joueurCourant + " a gagne");
+                plateau.afficherGrilleSurConsole();
+                FinPartie = true;
+            }
+            
+            if (joueurCourant == ListeJoueurs[0]) {
+                joueurCourant = ListeJoueurs[1];
+                System.out.println(joueurCourant);
+            }
+            else if (joueurCourant == ListeJoueurs[1]) {
+                joueurCourant = ListeJoueurs[0];
+                System.out.println(joueurCourant);
+            }
 
         }
     }

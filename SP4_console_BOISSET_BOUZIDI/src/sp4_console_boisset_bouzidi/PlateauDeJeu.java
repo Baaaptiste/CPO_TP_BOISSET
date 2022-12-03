@@ -26,7 +26,7 @@ public class PlateauDeJeu {
                 return i;
             }
         }
-        return 0;
+        return -1;
     }
     
     public boolean grilleRemplie(){
