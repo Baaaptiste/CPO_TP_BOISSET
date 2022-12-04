@@ -111,15 +111,18 @@ public class Partie {
                     System.out.println("La colonne " +NumeroColonneJouer+" est pleine");
                     joueurCourant.ajouterJeton(new Jeton(joueurCourant.getCouleur()));                
                 }
-                else{                
+                else{ 
+                    if (plateau.presenceTrouNoir(NumeroLigneJouer, NumeroColonneJouer)==false){                    
+                        if (plateau.presenceDesintegrateur(NumeroLigneJouer, NumeroColonneJouer)==true){ 
+                            joueurCourant.obtenirDesintegrateur();
+                            plateau.supprimerDesintegrateur(NumeroLigneJouer, NumeroColonneJouer);
+                        }
+                    }                    
                     if (plateau.presenceTrouNoir(NumeroLigneJouer, NumeroColonneJouer)==true){
                         plateau.supprimerJeton(NumeroLigneJouer, NumeroColonneJouer);
                         plateau.supprimerTrouNoir(NumeroLigneJouer, NumeroColonneJouer);
                     }
-                    if (plateau.presenceDesintegrateur(NumeroLigneJouer, NumeroColonneJouer)==true){ 
-                        joueurCourant.obtenirDesintegrateur();
-                        plateau.supprimerDesintegrateur(NumeroLigneJouer, NumeroColonneJouer);
-                    } 
+                   
                 }
 
 
@@ -152,18 +155,48 @@ public class Partie {
                 }
 
                
-                if (plateau.presenceJeton(NumeroColonneJouer, NumeroLigneJouer)== true ){   //
-                    plateau.supprimerJeton(NumeroColonneJouer, NumeroLigneJouer);           //
-                    joueurCourant.ajouterJeton(new Jeton(joueurCourant.getCouleur()));    //revoir le cas ou je recup un jeton bug dans tassercolonne
-                    plateau.tasserColonne(NumeroColonneJouer);                            //et tu peux recup que ton jeton
+                if (joueurCourant.getCouleur() == "rouge") {
+                    if (plateau.presenceJeton(NumeroLigneJouer, NumeroColonneJouer)== true ){
+                        if (plateau.lireCouleurJeton(NumeroLigneJouer, NumeroColonneJouer)== "rouge" ){                      
+                            plateau.supprimerJeton(NumeroLigneJouer, NumeroColonneJouer);          
+                            joueurCourant.ajouterJeton(new Jeton(joueurCourant.getCouleur())); 
+                            plateau.tasserColonne(NumeroColonneJouer);  
+                        }
+                        else {
+                            System.out.println("Mauvais couleur de jeton");
+                        }
+                    }
+                    else {
+                        System.out.println("Aucun jeton present ici");                        
+                    }
                 }
+                else{
+                    if (plateau.presenceJeton(NumeroLigneJouer, NumeroColonneJouer)== true ){
+                        if (plateau.lireCouleurJeton(NumeroLigneJouer, NumeroColonneJouer)== "jaune" ){                      
+                            plateau.supprimerJeton(NumeroLigneJouer, NumeroColonneJouer);          
+                            joueurCourant.ajouterJeton(new Jeton(joueurCourant.getCouleur())); 
+                            plateau.tasserColonne(NumeroColonneJouer);  
+                        }
+                        else {
+                            System.out.println("Mauvais couleur de jeton");
+                        }
+                    }
+                    else {
+                        System.out.println("Aucun jeton present ici");                        
+                    }
+                }
+                  
 
-
-                if (plateau.etreGagnantePourCouleur(joueurCourant.getCouleur())) {
-                    System.out.println("Bravo " + joueurCourant + " a gagne");
+                if (plateau.etreGagnantePourCouleur(ListeJoueurs[0].getCouleur())) {
+                    System.out.println("Bravo " + ListeJoueurs[0] + " a gagne");
                     plateau.afficherGrilleSurConsole();
                     FinPartie = true;
                 }
+                if (plateau.etreGagnantePourCouleur(ListeJoueurs[1].getCouleur())) {
+                    System.out.println("Bravo " + ListeJoueurs[1] + " a gagne");
+                    plateau.afficherGrilleSurConsole();
+                    FinPartie = true;
+                }                
 
                 if (joueurCourant == ListeJoueurs[0]) {
                     joueurCourant = ListeJoueurs[1];
