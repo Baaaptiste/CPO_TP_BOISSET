@@ -23,17 +23,17 @@ public class Jeton {
 
     public String getCouleur() {  
         if (couleur=="rouge"){
-            return "R";
-        }else return "J";        
+            return "\u001B[31m R ";
+        }else return "\u001B[33m J ";        
     }
     
     @Override
     public String toString() {
         if (couleur == "rouge" ){
-            return "R" ;
+            return "\u001B[31m R " ;
     }
         else{
-            return "J";
+            return "\u001B[33m J "; 
         }
     }
     

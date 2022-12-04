@@ -96,13 +96,13 @@ public class CelluleDeGrille {
             return jetonCourant.getCouleur();
         }
         else if (avoirTrouNoir == true){
-            return"@";
+            return"\u001B[0m @ ";
         }
         else if (avoirDesintegrateur == true && avoirTrouNoir == false){
-            return"D";
+            return"\u001B[0m D ";
         }
-        else{
-            return".";
+        else{ 
+            return"\u001B[0m . ";
         }
         }
 

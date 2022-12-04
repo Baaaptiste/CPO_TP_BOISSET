@@ -46,7 +46,7 @@ public class PlateauDeJeu {
     public String lireCouleurJeton(int x, int y){
         return grille[x][y].lireCouleurDuJeton();
     }    
-    
+     
     
     public void afficherGrilleSurConsole(){
         for (int ligne=5; ligne>=0; ligne--){

@@ -29,7 +29,7 @@ public class joueur {
         return reserveJetons.size();
     }
 
-    
+     
     public void ajouterJeton(Jeton jeton) {
         reserveJetons.add(jeton);
     }
