@@ -105,6 +105,10 @@ public class CelluleDeGrille {
             return".";
         }
         }
+
+    public Jeton getJetonCourant() {
+        return jetonCourant;
+    }
     
     
 }

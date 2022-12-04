@@ -140,11 +140,12 @@ public class PlateauDeJeu {
     }
     
         
-    public void tasserColonne(int lacolonne){
-        for (int ligne=0; ligne<7;ligne++){
-            if (grille[ligne][lacolonne].presenceJeton()==false){
-                if (grille[ligne+1][lacolonne].presenceJeton()==true){
-                    grille[ligne][lacolonne].affecterJeton(grille[ligne+1][lacolonne].recupererJeton());
+    public void tasserColonne(int colonne){
+        for (int ligne=0; ligne<6;ligne++){
+            if (grille[ligne][colonne].presenceJeton()==false){
+                if (grille[ligne+1][colonne].presenceJeton()==true){
+                    grille[ligne][colonne].affecterJeton(grille[ligne + 1][colonne].getJetonCourant());//on prend le jeton de la case superieure et on le met dans la case traitee
+                    grille[ligne + 1][colonne].supprimerJeton();    
                 }              
             }
         }
@@ -165,6 +166,10 @@ public class PlateauDeJeu {
         grille[x][y].supprimerTrouNoir();
     }
     
+    public void supprimerDesintegrateur(int x, int y){
+        grille[x][y].supprimerTrouNoir();
+    }
+        
     public void placerDesintegrateur(int x, int y){
         grille[x][y].placerDesintegrateur();
     }    
