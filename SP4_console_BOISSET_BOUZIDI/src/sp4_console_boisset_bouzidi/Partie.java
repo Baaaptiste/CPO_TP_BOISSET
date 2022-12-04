@@ -148,12 +148,6 @@ public class Partie {
                 NumeroColonneJouer = sc.nextInt();
                 System.out.println("Saisissez le numero de ligne de 0 a 5 du jeton");
                 NumeroLigneJouer = sc.nextInt();                
-
-                if (plateau.grilleRemplie()==true){
-                    System.out.println("Fin de partie, la grille est remplie");
-                    FinPartie = true;
-                }
-
                
                 if (joueurCourant.getCouleur() == "rouge") {
                     if (plateau.presenceJeton(NumeroLigneJouer, NumeroColonneJouer)== true ){
@@ -201,13 +195,73 @@ public class Partie {
                 if (joueurCourant == ListeJoueurs[0]) {
                     joueurCourant = ListeJoueurs[1];
                 }
-                else if (joueurCourant == ListeJoueurs[1]) {
+                else if (joueurCourant == ListeJoueurs[1]) { 
                     joueurCourant = ListeJoueurs[0];
                 }
             }
             
-            
-                // faire cas numero 3
+            else if (Reponse==3){ 
+                System.out.println("Saisissez le numero de colonne de 0 a 6 ou vous jouez votre desintegrateur");
+                plateau.afficherGrilleSurConsole();
+                NumeroColonneJouer = sc.nextInt();
+                System.out.println("Saisissez le numero de ligne de 0 a 5 ou vous jouez votre desintegrateur");
+                NumeroLigneJouer = sc.nextInt();
+                
+                if (joueurCourant.utiliserDesintegrateur()==true){
+                    
+                    if (joueurCourant.getCouleur() == "rouge") {  
+                        if (plateau.presenceJeton(NumeroLigneJouer, NumeroColonneJouer)== true ){
+                            if (plateau.lireCouleurJeton(NumeroLigneJouer, NumeroColonneJouer)== "jaune" ){  
+                                plateau.supprimerJeton(NumeroLigneJouer, NumeroColonneJouer);
+                                plateau.tasserColonne(NumeroColonneJouer);
+                            }
+                            else {
+                                System.out.println("Erreur c'est votre jeton");
+                            }
+                        }
+                        else {
+                            System.out.println("Aucun jeton present ici");
+                        }
+                    }
+                    else{
+                        if (plateau.presenceJeton(NumeroLigneJouer, NumeroColonneJouer)== true ){
+                            if (plateau.lireCouleurJeton(NumeroLigneJouer, NumeroColonneJouer)== "rouge" ){  
+                                plateau.supprimerJeton(NumeroLigneJouer, NumeroColonneJouer);
+                                plateau.tasserColonne(NumeroColonneJouer);
+                            }
+                            else {
+                                System.out.println("Erreur c'est votre jeton");
+                            }
+                        }
+                        else {
+                            System.out.println("Aucun jeton present ici");
+                        }
+                    }
+                }
+                else{
+                    System.out.println("Vous n'avez pas de desintegrateur");
+                }
+       
+                
+                if (plateau.etreGagnantePourCouleur(ListeJoueurs[0].getCouleur())) {
+                    System.out.println("Bravo " + ListeJoueurs[0] + " a gagne");
+                    plateau.afficherGrilleSurConsole();
+                    FinPartie = true;
+                }
+                if (plateau.etreGagnantePourCouleur(ListeJoueurs[1].getCouleur())) {
+                    System.out.println("Bravo " + ListeJoueurs[1] + " a gagne");
+                    plateau.afficherGrilleSurConsole();
+                    FinPartie = true;
+                }                
+
+                if (joueurCourant == ListeJoueurs[0]) {
+                    joueurCourant = ListeJoueurs[1];
+                }
+                else if (joueurCourant == ListeJoueurs[1]) { 
+                    joueurCourant = ListeJoueurs[0];
+                }                
+                
+            }
                         
 
         }
