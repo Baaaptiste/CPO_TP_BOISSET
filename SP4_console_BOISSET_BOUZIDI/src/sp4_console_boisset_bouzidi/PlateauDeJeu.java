@@ -141,10 +141,10 @@ public class PlateauDeJeu {
     
         
     public void tasserColonne(int colonne){
-        for (int ligne=0; ligne<6;ligne++){
+        for (int ligne=0; ligne<5;ligne++){
             if (grille[ligne][colonne].presenceJeton()==false){
                 if (grille[ligne+1][colonne].presenceJeton()==true){
-                    grille[ligne][colonne].affecterJeton(grille[ligne + 1][colonne].getJetonCourant());//on prend le jeton de la case superieure et on le met dans la case traitee
+                    grille[ligne][colonne].affecterJeton(grille[ligne + 1][colonne].getJetonCourant());
                     grille[ligne + 1][colonne].supprimerJeton();    
                 }              
             }
