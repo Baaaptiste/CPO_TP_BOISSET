@@ -24,8 +24,7 @@ public class Jeton {
     public String getCouleur() {  
         if (couleur=="rouge"){
             return "R";
-        }else return "J"; 
-        
+        }else return "J";        
     }
     
     @Override
@@ -37,6 +36,7 @@ public class Jeton {
             return "J";
         }
     }
+    
     
     
 }
