@@ -167,7 +167,7 @@ public class PlateauDeJeu {
     }
     
     public void supprimerDesintegrateur(int x, int y){
-        grille[x][y].supprimerTrouNoir();
+        grille[x][y].supprimerDesintegrateur();
     }
         
     public void placerDesintegrateur(int x, int y){
@@ -186,7 +186,7 @@ public class PlateauDeJeu {
         if (grille[x][y].presenceTrouNoir()==true){
             return true;
         }
-        else{
+        else{ 
             return false;
         }     
     }
@@ -199,5 +199,15 @@ public class PlateauDeJeu {
             return false;
         }     
     }
+    
+    public void viderGrille(){
+        for(int ligne=0;ligne<6;ligne++){
+            for(int col=0;col<7;col++){
+                grille[ligne][col].supprimerDesintegrateur();
+                grille[ligne][col].supprimerJeton();
+                grille[ligne][col].supprimerTrouNoir();
+            }
+        }
+    }    
 }
 

@@ -84,7 +84,7 @@ public class CelluleDeGrille {
     public void supprimerDesintegrateur(){
         avoirDesintegrateur = false;   
     }
-    
+     
     public void activerTrouNoir(){
        supprimerJeton() ;
        supprimerTrouNoir();

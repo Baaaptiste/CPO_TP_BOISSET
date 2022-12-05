@@ -79,6 +79,7 @@ public class Partie {
     }
     
     public void lancerPartie(){
+        plateau.viderGrille();
         boolean FinPartie = false;
         joueurCourant=ListeJoueurs[0];
         placerTrousNoirsEtDesintegrateurs();
