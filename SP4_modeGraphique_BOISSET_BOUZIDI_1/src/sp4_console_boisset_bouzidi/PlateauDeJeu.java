@@ -5,7 +5,7 @@
 package sp4_console_boisset_bouzidi;
 
 /**
- *
+ * 
  * @author bapti
  */
 public class PlateauDeJeu {
