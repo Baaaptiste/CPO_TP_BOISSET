@@ -6,7 +6,7 @@ package sp4_console_boisset_bouzidi;
 
 import java.util.ArrayList;
 
-/**
+/** 
  *
  * @author bapti
  */
@@ -70,6 +70,10 @@ public class joueur {
 
     public int getNombreDesintegrateurs() {
         return nombreDesintegrateurs;
+    }
+
+    public String getNom() {
+        return nom;
     }
     
     

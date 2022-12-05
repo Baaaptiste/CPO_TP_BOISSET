@@ -189,7 +189,7 @@ public class Partie {
                     }
                 }
                   
-
+ 
                 if (plateau.etreGagnantePourCouleur(ListeJoueurs[0].getCouleur())) {
                     System.out.println("\nBravo " + ListeJoueurs[0] + " a gagne");
                     plateau.afficherGrilleSurConsole();

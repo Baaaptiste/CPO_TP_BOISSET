@@ -72,7 +72,7 @@ public class CelluleDeGrille {
         if (avoirDesintegrateur==true){
             return true ;
         }
-        else{
+        else{ 
             return false ;
         }
     }
