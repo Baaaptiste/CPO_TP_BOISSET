@@ -94,7 +94,7 @@ public class fenetreDejeu extends javax.swing.JFrame {
         jTextArea2.setRows(5);
         message.setViewportView(jTextArea2);
 
-        panneau_info_partie.add(message, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 70, -1, 60));
+        panneau_info_partie.add(message, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 60, -1, 70));
 
         getContentPane().add(panneau_info_partie, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 510, 310, 140));
 
