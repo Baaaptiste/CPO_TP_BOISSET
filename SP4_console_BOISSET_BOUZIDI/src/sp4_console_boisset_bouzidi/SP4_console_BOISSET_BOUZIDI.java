@@ -7,9 +7,9 @@ package sp4_console_boisset_bouzidi;
 /**
  *
  * @author bapti
- */
+ */ 
 public class SP4_console_BOISSET_BOUZIDI {
-
+    
     /**
      * @param args the command line arguments
      */

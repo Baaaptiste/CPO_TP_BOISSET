@@ -3,7 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package sp4_console_boisset_bouzidi;
-
+ 
 /**
  *
  * @author bapti
@@ -167,7 +167,7 @@ public class PlateauDeJeu {
     }
     
     public void supprimerDesintegrateur(int x, int y){
-        grille[x][y].supprimerTrouNoir();
+        grille[x][y].supprimerDesintegrateur();
     }
         
     public void placerDesintegrateur(int x, int y){

@@ -120,18 +120,15 @@ public class Partie {
                     System.out.println("\nLa colonne " +NumeroColonneJouer+" est pleine");
                     joueurCourant.ajouterJeton(new Jeton(joueurCourant.getCouleur()));                
                 }
-                else{ 
-                    if (plateau.presenceTrouNoir(NumeroLigneJouer, NumeroColonneJouer)==false){                    
-                        if (plateau.presenceDesintegrateur(NumeroLigneJouer, NumeroColonneJouer)==true){ 
-                            joueurCourant.obtenirDesintegrateur();
-                            plateau.supprimerDesintegrateur(NumeroLigneJouer, NumeroColonneJouer);
-                        }
-                    }                    
+                else{             
                     if (plateau.presenceTrouNoir(NumeroLigneJouer, NumeroColonneJouer)==true){
                         plateau.supprimerJeton(NumeroLigneJouer, NumeroColonneJouer);
                         plateau.supprimerTrouNoir(NumeroLigneJouer, NumeroColonneJouer);
                     }
-                   
+                    if (plateau.presenceDesintegrateur(NumeroLigneJouer, NumeroColonneJouer)==true){ 
+                        joueurCourant.obtenirDesintegrateur();
+                        plateau.supprimerDesintegrateur(NumeroLigneJouer, NumeroColonneJouer);
+                    }
                 }
 
 

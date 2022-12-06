@@ -1,4 +1,4 @@
-/*
+/* 
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
@@ -8,7 +8,7 @@ package sp4_console_boisset_bouzidi;
  *
  * @author bapti
  */
-public class CelluleDeGrille {
+public class CelluleDeGrille { 
     private Jeton jetonCourant;
     private boolean avoirTrouNoir;
     private boolean avoirDesintegrateur;
