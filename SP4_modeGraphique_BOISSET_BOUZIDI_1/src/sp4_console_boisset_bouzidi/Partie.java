@@ -9,7 +9,7 @@ import java.util.Scanner;
 
 /**
  *
- * @author bapti
+ * @author bapti 
  */
 public class Partie {
     private joueur[] ListeJoueurs = new joueur[2];

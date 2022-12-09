@@ -8,7 +8,7 @@ import java.util.logging.Logger;
 
 /**
  *
- * @author bapti
+ * @author bapti 
  */
 public class Jeton {
     private String  couleur ;

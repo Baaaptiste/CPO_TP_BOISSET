@@ -539,7 +539,7 @@ public class fenetreDejeu extends javax.swing.JFrame {
             public void run() {
                 new fenetreDejeu().setVisible(true);
             }
-        });
+        }); 
     }
 
     void initialiserPartie() {
