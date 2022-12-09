@@ -24,7 +24,7 @@ public class joueur {
     public void affecterCouleur(String lacouleur){
         this.couleur = lacouleur;
     }
-    
+     
     public int nombreDeJetons(){
         return reserveJetons.size();
     }
@@ -70,6 +70,10 @@ public class joueur {
 
     public int getNombreDesintegrateurs() {
         return nombreDesintegrateurs;
+    }
+
+    public String getNom() {
+        return nom;
     }
     
     
